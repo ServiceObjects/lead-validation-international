@@ -35,16 +35,12 @@ https://swsbackup.serviceobjects.com/LVI/api.svc/json/ValidateLeadInternational?
 ### XML
 #### Trial
 
-https://trial.serviceobjects.com/LVI/api.svc/json/ValidateLeadInternational?FullName=Tim+Cook&Salutation=&FirstName=&LastName=&BusinessName=Apple&BusinessDomain=&BusinessEIN=&Address1=1+Infinite+Loop&Address2=&Address3=&Address4=&Address5=&Locality=Cupertino&AdminArea=CA&PostalCode=&Country=USA&Phone1=1-408-996-1010&Phone2=&Email=tim%40apple.com&IPAddress=&Gender=&DateOfBirth=&UTCCaptureTime=&OutputLanguage=English&TestType=business-noip&LicenseKey={LicenseKey}
+https://trial.serviceobjects.com/LVI/api.svc/xml/ValidateLeadInternational?FullName=Tim+Cook&Salutation=&FirstName=&LastName=&BusinessName=Apple&BusinessDomain=&BusinessEIN=&Address1=1+Infinite+Loop&Address2=&Address3=&Address4=&Address5=&Locality=Cupertino&AdminArea=CA&PostalCode=&Country=USA&Phone1=1-408-996-1010&Phone2=&Email=tim%40apple.com&IPAddress=&Gender=&DateOfBirth=&UTCCaptureTime=&OutputLanguage=English&TestType=business-noip&LicenseKey={LicenseKey}
 
 #### Production
 
-https://sws.serviceobjects.com/LVI/api.svc/json/ValidateLeadInternational?FullName=Tim+Cook&Salutation=&FirstName=&LastName=&BusinessName=Apple&BusinessDomain=&BusinessEIN=&Address1=1+Infinite+Loop&Address2=&Address3=&Address4=&Address5=&Locality=Cupertino&AdminArea=CA&PostalCode=&Country=USA&Phone1=1-408-996-1010&Phone2=&Email=tim%40apple.com&IPAddress=&Gender=&DateOfBirth=&UTCCaptureTime=&OutputLanguage=English&TestType=business-noip&LicenseKey={LicenseKey}
+https://sws.serviceobjects.com/LVI/api.svc/xml/ValidateLeadInternational?FullName=Tim+Cook&Salutation=&FirstName=&LastName=&BusinessName=Apple&BusinessDomain=&BusinessEIN=&Address1=1+Infinite+Loop&Address2=&Address3=&Address4=&Address5=&Locality=Cupertino&AdminArea=CA&PostalCode=&Country=USA&Phone1=1-408-996-1010&Phone2=&Email=tim%40apple.com&IPAddress=&Gender=&DateOfBirth=&UTCCaptureTime=&OutputLanguage=English&TestType=business-noip&LicenseKey={LicenseKey}
 
 #### Production Backup
 
-https://swsbackup.serviceobjects.com/LVI/api.svc/json/ValidateLeadInternational?FullName=Tim+Cook&Salutation=&FirstName=&LastName=&BusinessName=Apple&BusinessDomain=&BusinessEIN=&Address1=1+Infinite+Loop&Address2=&Address3=&Address4=&Address5=&Locality=Cupertino&AdminArea=CA&PostalCode=&Country=USA&Phone1=1-408-996-1010&Phone2=&Email=tim%40apple.com&IPAddress=&Gender=&DateOfBirth=&UTCCaptureTime=&OutputLanguage=English&TestType=business-noip&LicenseKey={LicenseKey}
-
-#### Production
-
-https://sws.serviceobjects.com/AV3/api.svc/GetSecondaryNumbers?Address=27+E+Cota+St&City=Santa+Barbara&State=CA&PostalCode=93101&LicenseKey={LicenseKey}
+https://swsbackup.serviceobjects.com/LVI/api.svc/xml/ValidateLeadInternational?FullName=Tim+Cook&Salutation=&FirstName=&LastName=&BusinessName=Apple&BusinessDomain=&BusinessEIN=&Address1=1+Infinite+Loop&Address2=&Address3=&Address4=&Address5=&Locality=Cupertino&AdminArea=CA&PostalCode=&Country=USA&Phone1=1-408-996-1010&Phone2=&Email=tim%40apple.com&IPAddress=&Gender=&DateOfBirth=&UTCCaptureTime=&OutputLanguage=English&TestType=business-noip&LicenseKey={LicenseKey}
