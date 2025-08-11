@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lead-validation-international-dot-net", "lead-validation-international-dot-net\lead-validation-international-dot-net.csproj", "{4215D73A-C29D-4A23-B839-85DA6DD8EACC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lead-validation-international-dot-net-examples", "lead-validation-international-dot-net-examples\lead-validation-international-dot-net-examples.csproj", "{8A43679A-A8D7-4266-B453-90D33BB6E377}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "lead-validation-international-python", "lead-validation-international-python\lead-validation-international-python.pyproj", "{257A5C12-D337-486A-90F5-88BC8B43BBC2}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "lead-validation-international-python-examples", "lead-validation-international-python-examples\lead-validation-international-python-examples.pyproj", "{745C892C-8FB7-4B37-90A5-545F0417462A}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "lead-validation-international-nodejs", "lead-validation-international-nodejs\lead-validation-international-nodejs.esproj", "{19C38348-4AE8-C86E-41B3-35B9B9C01C27}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "lead-validation-international-nodejs-examples", "lead-validation-international-nodejs-examples\lead-validation-international-nodejs-examples.esproj", "{0BFFCC03-04E9-8923-17F0-A217A8170596}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4215D73A-C29D-4A23-B839-85DA6DD8EACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4215D73A-C29D-4A23-B839-85DA6DD8EACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4215D73A-C29D-4A23-B839-85DA6DD8EACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4215D73A-C29D-4A23-B839-85DA6DD8EACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A43679A-A8D7-4266-B453-90D33BB6E377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A43679A-A8D7-4266-B453-90D33BB6E377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A43679A-A8D7-4266-B453-90D33BB6E377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A43679A-A8D7-4266-B453-90D33BB6E377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{257A5C12-D337-486A-90F5-88BC8B43BBC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{257A5C12-D337-486A-90F5-88BC8B43BBC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{745C892C-8FB7-4B37-90A5-545F0417462A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{745C892C-8FB7-4B37-90A5-545F0417462A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C38348-4AE8-C86E-41B3-35B9B9C01C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C38348-4AE8-C86E-41B3-35B9B9C01C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C38348-4AE8-C86E-41B3-35B9B9C01C27}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{19C38348-4AE8-C86E-41B3-35B9B9C01C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C38348-4AE8-C86E-41B3-35B9B9C01C27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19C38348-4AE8-C86E-41B3-35B9B9C01C27}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0BFFCC03-04E9-8923-17F0-A217A8170596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BFFCC03-04E9-8923-17F0-A217A8170596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BFFCC03-04E9-8923-17F0-A217A8170596}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0BFFCC03-04E9-8923-17F0-A217A8170596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BFFCC03-04E9-8923-17F0-A217A8170596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BFFCC03-04E9-8923-17F0-A217A8170596}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50FB59BF-7B33-49E4-97CA-497B72DF7E93}
+	EndGlobalSection
+EndGlobal

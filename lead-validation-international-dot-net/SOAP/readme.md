@@ -1,0 +1,193 @@
+﻿![Service Objects Logo](https://www.serviceobjects.com/wp-content/uploads/2021/05/SO-Logo-with-TM.gif "Service Objects Logo")
+
+# LVI - Lead Validation International  
+
+DOTS Lead Validation International (LVI) evaluates international lead data and scores the data quality into pass/fail/review categories. By evaluating the information quality of a contact, online marketers can more effectively weed-out fraudulent contacts.Online fraudsters are more likely to provide inaccurate contact information because the address and phone number can be easily traced. 
+
+Unlike other validation services that perform simple data checks on single variables, Service Objects Lead Validation solution is able to cross-validate that a contact’s name, address, phone numbers, e-mail and IP address are all matched each other and are related to the consumer.
+
+## [Service Objects Website](https://serviceobjects.com)
+
+# LVI - ValidateLeadInternational
+
+Lead Validation International provides all of the functionality of the Lead Validation service but is able to process and handle international leads. It takes all of the standard information that a typical web form would provide: name, address, phone, email, and IP address. 
+
+In addition to the full functionality of the original service.
+
+### [ValidateLeadInternational Developer Guide/Documentation](https://www.serviceobjects.com/docs/dots-lead-validation-international/lvi-operations/lvi-validateleadinternational-recommended/)
+
+## Library Usage
+
+```
+//
+// 1 Instantiate the service wrapper
+   var lvi = new ValidateLeadInternational(true);
+
+// 2 Provide your input data
+//
+//  Required fields:
+//               Country
+//               TestType 
+//               LicenseKey
+//               IsLive
+// 
+// Optional:
+//        FullName 
+//        Salutation
+//        FirstName
+//        LastName
+//        BusinessName
+//        BusinessDomain
+//        BusinessEIN
+//        Address1
+//        Address2
+//        Address3
+//        Address4
+//        Address5
+//        Locality
+//        AdminArea
+//        PostalCode
+//        Phone1
+//        Phone2
+//        Email
+//        IPAddress
+//        Gender
+//        DateOfBirth
+//        UTCCaptureTime
+//        OutputLanguage
+//        TimeoutSeconds (default: 15)
+
+// 3 Call the service
+ var response = lvi.InvokeAsync(
+                FullName, Salutation, FirstName, LastName,
+                BusinessName, BusinessDomain, BusinessEIN,
+                Address1, Address2, Address3, Address4, Address5,
+                Locality, AdminArea, PostalCode, Country,
+                Phone1, Phone2, Email, IPAddress,
+                Gender, DateOfBirth, UTCCaptureTime,
+                OutputLanguage, TestType, LicenseKey).Result;
+
+// 3. Inspect results.
+if (response.Error is null)
+{
+    Console.WriteLine("\r\n* Lead Details *\r\n");
+
+    Console.WriteLine($"Overall Certainty     : {response.OverallCertainty}");
+    Console.WriteLine($"Overall Quality       : {response.OverallQuality}");
+    Console.WriteLine($"Lead Type             : {response.LeadType}");
+    Console.WriteLine($"Lead Country          : {response.LeadCountry}");
+    Console.WriteLine($"Note Codes            : {response.NoteCodes}");
+    Console.WriteLine($"Note Descriptions     : {response.NoteDesc}");
+
+    Console.WriteLine("\r\n* Name Details *\r\n");
+    Console.WriteLine($"Name Certainty        : {response.NameCertainty}");
+    Console.WriteLine($"Name Quality          : {response.NameQuality}");
+    Console.WriteLine($"First Name            : {response.FirstName}");
+    Console.WriteLine($"Last Name             : {response.LastName}");
+    Console.WriteLine($"First Name Latin      : {response.FirstNameLatin}");
+    Console.WriteLine($"Last Name Latin       : {response.LastNameLatin}");
+    Console.WriteLine($"Name Note Codes       : {response.NameNoteCodes}");
+    Console.WriteLine($"Name Note Descriptions: {response.NameNoteDesc}");
+
+    Console.WriteLine("\r\n* Address Details *\r\n");
+    Console.WriteLine($"Address Certainty     : {response.AddressCertainty}");
+    Console.WriteLine($"Address Quality       : {response.AddressQuality}");
+    Console.WriteLine($"Address Line 1        : {response.AddressLine1}");
+    Console.WriteLine($"Address Line 2        : {response.AddressLine2}");
+    Console.WriteLine($"Address Line 3        : {response.AddressLine3}");
+    Console.WriteLine($"Address Line 4        : {response.AddressLine4}");
+    Console.WriteLine($"Address Line 5        : {response.AddressLine5}");
+    Console.WriteLine($"Address Locality      : {response.AddressLocality}");
+    Console.WriteLine($"Address Admin Area    : {response.AddressAdminArea}");
+    Console.WriteLine($"Address Postal Code   : {response.AddressPostalCode}");
+    Console.WriteLine($"Address Country       : {response.AddressCountry}");
+    Console.WriteLine($"Address Resolution    : {response.AddressResolutionLevel}");
+    Console.WriteLine($"Address Note Codes    : {response.AddressNoteCodes}");
+    Console.WriteLine($"Address Note Desc     : {response.AddressNoteDesc}");
+
+    Console.WriteLine("\r\n*  Email Details *\r\n");
+    Console.WriteLine($"Email Certainty       : {response.EmailCertainty}");
+    Console.WriteLine($"Email Quality         : {response.EmailQuality}");
+    Console.WriteLine($"Email Corrected       : {response.EmailCorrected}");
+    Console.WriteLine($"Email Note Codes      : {response.EmailNoteCodes}");
+    Console.WriteLine($"Email Note Desc       : {response.EmailNoteDesc}");
+
+    Console.WriteLine("\r\n*  IP Address Details *\r\n");
+    Console.WriteLine($"IP Certainty          : {response.IPCertainty}");
+    Console.WriteLine($"IP Quality            : {response.IPQuality}");
+    Console.WriteLine($"IP Country            : {response.IPCountry}");
+    Console.WriteLine($"IP Locality           : {response.IPLocality}");
+    Console.WriteLine($"IP Admin Area         : {response.IPAdminArea}");
+    Console.WriteLine($"IP Note Codes         : {response.IPNoteCodes}");
+    Console.WriteLine($"IP Note Descriptions  : {response.IPNoteDesc}");
+
+    Console.WriteLine("\r\n*  Phone Details *\r\n");
+    Console.WriteLine($"Phone 1 Certainty     : {response.Phone1Certainty}");
+    Console.WriteLine($"Phone 1 Quality       : {response.Phone1Quality}");
+    Console.WriteLine($"Phone 1 Locality      : {response.Phone1Locality}");
+    Console.WriteLine($"Phone 1 Admin Area    : {response.Phone1AdminArea}");
+    Console.WriteLine($"Phone 1 Country       : {response.Phone1Country}");
+    Console.WriteLine($"Phone 1 Note Codes    : {response.Phone1NoteCodes}");
+    Console.WriteLine($"Phone 1 Note Desc     : {response.Phone1NoteDesc}");
+
+    Console.WriteLine($"Phone 2 Certainty     : {response.Phone2Certainty}");
+    Console.WriteLine($"Phone 2 Quality       : {response.Phone2Quality}");
+    Console.WriteLine($"Phone 2 Locality      : {response.Phone2Locality}");
+    Console.WriteLine($"Phone 2 Admin Area    : {response.Phone2AdminArea}");
+    Console.WriteLine($"Phone 2 Country       : {response.Phone2Country}");
+    Console.WriteLine($"Phone 2 Note Codes    : {response.Phone2NoteCodes}");
+    Console.WriteLine($"Phone 2 Note Desc     : {response.Phone2NoteDesc}");
+
+    Console.WriteLine("\r\n* Business Details *\r\n");
+    Console.WriteLine($"Business Certainty    : {response.BusinessCertainty}");
+    Console.WriteLine($"Business Quality      : {response.BusinessQuality}");
+    Console.WriteLine($"Business Name         : {response.BusinessName}");
+    Console.WriteLine($"Business Domain       : {response.BusinessDomain}");
+    Console.WriteLine($"Business Email        : {response.BusinessEmail}");
+    Console.WriteLine($"Business Note Codes   : {response.BusinessNoteCodes}");
+    Console.WriteLine($"Business Note Desc    : {response.BusinessNoteDesc}");
+
+    Console.WriteLine("\r\n* Phone Contact *\r\n");
+
+if (response.PhoneContact != null)
+{
+    Console.WriteLine($"Name   : {response.PhoneContact.Name}");
+    Console.WriteLine($"Address: {response.PhoneContact.Address}");
+    Console.WriteLine($"City   : {response.PhoneContact.City}");
+    Console.WriteLine($"State  : {response.PhoneContact.State}");
+    Console.WriteLine($"Zip    : {response.PhoneContact.Zip}");
+    Console.WriteLine($"Type   : {response.PhoneContact.Type}");
+    Console.WriteLine("\r\n");
+}
+else
+{
+    Console.WriteLine("No phone contact returned.");
+}
+
+Console.WriteLine("* Information Components *\r\n");
+
+if (response.InformationComponents?.Length > 0)
+{
+    foreach (var component in response.InformationComponents)
+    {
+        Console.WriteLine($"Name : {component.Name}");
+        Console.WriteLine($"Value: {component.Value}");
+        Console.WriteLine("\r\n");
+    }
+}
+else
+{
+    Console.WriteLine("No information components returned.");
+}
+}
+else
+{
+    Console.WriteLine("\r\n* Error *\r\n");
+
+    Console.WriteLine($"Error Type       : {response.Error.Type}");
+    Console.WriteLine($"Error Type Code  : {response.Error.TypeCode}");
+    Console.WriteLine($"Error Description: {response.Error.Desc}");
+    Console.WriteLine($"Error Desc Code  : {response.Error.DescCode}");
+}
+```
+
