@@ -31,7 +31,7 @@ const TrialBaseUrl = 'https://trial.serviceobjects.com/lvi/api.svc/';
 * <param name="response" type="Object">The API response object to validate.</param>
 * <returns type="boolean">True if the response is valid, false otherwise.</returns>
 */
-const isValid = (response) => !response?.Error || response.Error.Number !== '3';
+const isValid = (response) => !response?.Error || response.Error.TypeCode !== '4';
 
 /**
 * <summary>
@@ -125,7 +125,7 @@ const ValidateLeadInternationalClient = {
         if (isLive && !isValid(response)) {
             const fallbackUrl = buildUrl(params, BackupBaseUrl);
             const fallbackResponse = await httpGet(fallbackUrl, timeoutSeconds || 15);
-            return isValid(fallbackResponse) ? fallbackResponse : response;
+            return fallbackResponse;
         }
 
         return response;

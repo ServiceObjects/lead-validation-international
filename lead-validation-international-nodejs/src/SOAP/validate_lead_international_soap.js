@@ -140,7 +140,7 @@ class ValidateLeadInternationalSoap {
      * <returns type="boolean">True if the response is valid, false otherwise.</returns>
      */
     _isValid(response) {
-        return response && (!response.Error || response.Error.Number !== "4");
+        return response && (!response.Error || response.Error.TypeCode !== "4");
     }
 }
 

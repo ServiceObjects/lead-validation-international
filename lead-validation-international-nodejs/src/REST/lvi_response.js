@@ -34,7 +34,7 @@ export class ErrorModel {
     }
 
     toString() {
-        return `Error: Type = ${this.Type}, TypeCode = ${this.TypeCode}, Desc = ${this.Desc}, DescCode = ${this.DescCode}, Number = ${this.Number}`;
+        return `Error: Type = ${this.Type}, TypeCode = ${this.TypeCode}, Desc = ${this.Desc}, DescCode = ${this.DescCode}`;
     }
 }
 
