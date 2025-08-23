@@ -129,8 +129,8 @@ class ValidateLeadInternational:
             response = client.service.ValidateLeadInternational(**call_kwargs)
 
             # If response is None or fatal error code, trigger fallback
-            if response is None or (hasattr(response, 'Error') and response.Error and response.Error.Number == '3'):
-                    raise ValueError("Primary returned no result or fatal Error.Number=4")
+            if response is None or (hasattr(response, 'Error') and response.Error and response.Error.TypeCode == '3'):
+                    raise ValueError("Primary returned no result or fatal Error.TypeCode=4")
 
             return response
 
@@ -139,9 +139,6 @@ class ValidateLeadInternational:
             try:
                 client = Client(self._backup_wsdl, timeout=self._timeout_s)
                 response = client.service.ValidateLeadInternational(**call_kwargs)
-
-                if response is None:
-                    raise ValueError("Backup returned no result")
                 return response
             except (WebFault,Exception) as backup_ex:
                 # Raise a combined error if both attempts fail

@@ -109,4 +109,4 @@ class Error:
 
     def __str__(self) -> str:
         return (f"Error: Type={self.Type}, TypeCode={self.TypeCode}, Desc={self.Desc}, "
-                f"DescCode={self.DescCode}, Number={self.Number}")
+                f"DescCode={self.DescCode}")

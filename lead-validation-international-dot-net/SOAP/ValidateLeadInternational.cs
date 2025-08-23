@@ -116,7 +116,7 @@ namespace lead_validation_international_dot_net.SOAP
                     clientBackup.Endpoint.Address = new System.ServiceModel.EndpointAddress(_backupUrl);
                     clientBackup.InnerChannel.OperationTimeout = TimeSpan.FromMilliseconds(_timeoutMs);
 
-                    var response = await clientBackup.ValidateLeadInternationalAsync(
+                    ContactInternational response = await clientBackup.ValidateLeadInternationalAsync(
                     FullName, Salutation, FirstName, LastName,
                     BusinessName, BusinessDomain, BusinessEIN,
                     Address1, Address2, Address3, Address4, Address5,
@@ -124,12 +124,6 @@ namespace lead_validation_international_dot_net.SOAP
                     Phone1, Phone2, Email, IPAddress,
                     Gender, DateOfBirth, UTCCaptureTime,
                     OutputLanguage, TestType, LicenseKey).ConfigureAwait(false);
-
-                    // If the response is null, or if a “fatal” Error.TypeCode == "3" came back, force a fallback
-                    if (response == null || (response.Error != null && response.Error.TypeCode == "3"))
-                    {
-                        throw new InvalidOperationException("Backup endpoint returned null or a fatal Number=4 error for ValidateLeadInternational");
-                    }
                     return response;
                 }
                 catch (Exception backupEx)

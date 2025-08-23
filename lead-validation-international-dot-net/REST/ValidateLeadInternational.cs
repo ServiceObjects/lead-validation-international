@@ -30,7 +30,7 @@ namespace lead_validation_international_dot_net.REST
             {
                 var fallbackUr = BuildUrl(input, BackupBaseUrl);
                 LVIResponse fallbackResponse = Helper.HttpGet<LVIResponse>(fallbackUr, input.TimeoutSeconds);
-                return IsValid(fallbackResponse) ? fallbackResponse : response;
+                return fallbackResponse;
             }
 
             return response;
@@ -53,7 +53,7 @@ namespace lead_validation_international_dot_net.REST
             {
                 var fallbackUrl = BuildUrl(input, BackupBaseUrl);
                 LVIResponse fallbackResponse = await Helper.HttpGetAsync<LVIResponse>(fallbackUrl, input.TimeoutSeconds).ConfigureAwait(false);
-                return IsValid(fallbackResponse) ? fallbackResponse : response;
+                return fallbackResponse;
             }
 
             return response;
@@ -91,7 +91,7 @@ namespace lead_validation_international_dot_net.REST
             return baseUrl + qs;
         }
 
-        private static bool IsValid(LVIResponse response) => response?.Error == null || response.Error.Number != "3";
+        private static bool IsValid(LVIResponse response) => response?.Error == null || response.Error.TypeCode != "3";
 
         /// <summary>
         /// Lead Validation International (LVI) evaluates international lead data and scores the data quality into pass/fail/review categories. By evaluating the information quality of a contact, online marketers can more effectively weed-out fraudulent contacts.Online fraudsters are more likely to provide inaccurate contact information because the address and phone number can be easily traced. Unlike other validation services that perform simple data checks on single variables, Service Objects Lead Validation solution is able to cross-validate that a contact’s name, address, phone numbers, e-mail and IP address are all matched each other and are related to the consumer.

@@ -155,7 +155,7 @@ namespace lead_validation_international_dot_net.REST
 
         public override string ToString()
         {
-            return $"Error: Type = {Type}, TypeCode = {TypeCode}, Desc = {Desc}, DescCode = {DescCode}, Number = {Number}";
+            return $"Error: Type = {Type}, TypeCode = {TypeCode}, Desc = {Desc}, DescCode = {DescCode}";
         }
     }
 }
