@@ -10,9 +10,9 @@ async function main() {
   const isLive = true;
 
   //Lead Validation International - ValidateLeadInternational - REST SDK
-  validateLeadInternationalGo(licenseKey, isLive);
+  await validateLeadInternationalGo(licenseKey, isLive);
 
   //Lead Validation International - ValidateLeadInternational - SOAP SDK
-  validateLeadInternationalSoapGo(licenseKey, isLive);
+  await validateLeadInternationalSoapGo(licenseKey, isLive);
 }
 main().catch((err) => console.error("Error:", err));

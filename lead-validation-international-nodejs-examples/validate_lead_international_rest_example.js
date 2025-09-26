@@ -5,93 +5,94 @@ export async function validateLeadInternationalGo(licenseKey, isLive) {
     console.log("LeadValidationInternational - ValidateLeadInternationalInput - REST SDK");
     console.log( "-----------------------------------------------------------------------");
 
-    const full_name = "Tim Cook";
+    const fullName = "Tim Cook";
     const salutation = "";
-    const first_name = "Tim";
-    const last_name = "Cook";
-    const business_name = "Apple";
-    const business_domain = "apple.com";
-    const business_EIN = "";
-    const address_line1 = "1 Infinite Loop";
-    const address_line2 = "";
-    const address_line3 = "";
-    const address_line4 = "";
-    const address_line5 = "";
+    const firstName = "Tim";
+    const lastName = "Cook";
+    const businessName = "Apple";
+    const businessDomain = "apple.com";
+    const businessEIN = "";
+    const addressLine1 = "1 Infinite Loop";
+    const addressLine2 = "";
+    const addressLine3 = "";
+    const addressLine4 = "";
+    const addressLine5 = "";
     const locality = "Cupertino";
-    const admin_area = "CA";
-    const postal_code = "95014-2083";
+    const adminArea = "CA";
+    const postalCode = "95014-2083";
     const country = "USA";
     const phone1 = "1-408-996-1010";
     const phone2 = "";
     const email = "tim@apple.com";
-    const ip_address = "";
+    const ipAddress = "";
     const gender = "M";
-    const date_of_birth = "";
-    const utc_capture_time = "2025-08-01T12:00:00Z";
-    const output_language = "English";
-    const test_type = "business-noip";
-    const timeout_seconds = 15;
+    const dateOfBirth = "";
+    const utcCaptureTime = "2025-08-01T12:00:00Z";
+    const outputLanguage = "English";
+    const testType = "business-noip";
+    const timeoutSeconds = 15;
+    const testType = "business-noip";
+    const timeoutSeconds = 15;
 
     console.log("\n* Input *\n");
-    console.log(`Full Name        : ${full_name}`);
+    console.log(`Full Name        : ${fullName}`);
     console.log(`Salutation       : ${salutation}`);
-    console.log(`First Name       : ${first_name}`);
-    console.log(`Last Name        : ${last_name}`);
-    console.log(`Business Name    : ${business_name}`);
-    console.log(`Business Domain  : ${business_domain}`);
-    console.log(`Business EIN     : ${business_EIN}`);
-    console.log(`Address Line 1   : ${address_line1}`);
-    console.log(`Address Line 2   : ${address_line2}`);
-    console.log(`Address Line 3   : ${address_line3}`);
-    console.log(`Address Line 4   : ${address_line4}`);
-    console.log(`Address Line 5   : ${address_line5}`);
+    console.log(`First Name       : ${firstName}`);
+    console.log(`Last Name        : ${lastName}`);
+    console.log(`Business Name    : ${businessName}`);
+    console.log(`Business Domain  : ${businessDomain}`);
+    console.log(`Business EIN     : ${businessEIN}`);
+    console.log(`Address Line 1   : ${addressLine1}`);
+    console.log(`Address Line 2   : ${addressLine2}`);
+    console.log(`Address Line 3   : ${addressLine3}`);
+    console.log(`Address Line 4   : ${addressLine4}`);
+    console.log(`Address Line 5   : ${addressLine5}`);
     console.log(`Locality         : ${locality}`);
-    console.log(`Admin Area       : ${admin_area}`);
-    console.log(`Postal Code      : ${postal_code}`);
+    console.log(`Admin Area       : ${adminArea}`);
+    console.log(`Postal Code      : ${postalCode}`);
     console.log(`Country          : ${country}`);
     console.log(`Phone 1          : ${phone1}`);
     console.log(`Phone 2          : ${phone2}`);
     console.log(`Email            : ${email}`);
-    console.log(`IP Address       : ${ip_address}`);
+    console.log(`IP Address       : ${ipAddress}`);
     console.log(`Gender           : ${gender}`);
-    console.log(`Date of Birth    : ${date_of_birth}`);
-    console.log(`UTC Capture Time : ${utc_capture_time}`);
-    console.log(`Output Language  : ${output_language}`);
-    console.log(`Test Type        : ${test_type}`);
-    console.log(`Timeout Seconds  : ${timeout_seconds}`);
+    console.log(`Date of Birth    : ${dateOfBirth}`);
+    console.log(`UTC Capture Time : ${utcCaptureTime}`);
+    console.log(`Output Language  : ${outputLanguage}`);
+    console.log(`Test Type        : ${testType}`);
+    console.log(`Timeout Seconds  : ${timeoutSeconds}`);
     console.log(`Is Live Mode     : ${isLive}`);
     console.log(`License Key      : ${licenseKey}`);
 
     try {
-        const response = await ValidateLeadInternationalClient.invoke(full_name,
+        const response = await ValidateLeadInternationalClient.invoke(fullName,
                                                                     salutation,
-                                                                    first_name,
-                                                                    last_name,
-                                                                    business_name,
-                                                                    business_domain,
-                                                                    business_EIN,
-                                                                    address_line1,
-                                                                    address_line2,
-                                                                    address_line3,
-                                                                    address_line4,
-                                                                    address_line5,
+                                                                    firstName,
+                                                                    lastName,
+                                                                    businessName,
+                                                                    businessDomain,
+                                                                    businessEIN,
+                                                                    addressLine1,
+                                                                    addressLine2,
+                                                                    addressLine3,
+                                                                    addressLine4,
+                                                                    addressLine5,
                                                                     locality,
-                                                                    admin_area,
-                                                                    postal_code,
+                                                                    adminArea,
+                                                                    postalCode,
                                                                     country,
                                                                     phone1,
                                                                     phone2,
                                                                     email,
-                                                                    ip_address,
+                                                                    ipAddress,
                                                                     gender,
-                                                                    date_of_birth,
-                                                                    utc_capture_time,
-                                                                    output_language,
-                                                                    test_type,
+                                                                    dateOfBirth,
+                                                                    utcCaptureTime,
+                                                                    outputLanguage,
+                                                                    testType,
                                                                     licenseKey,
                                                                     isLive,
-                                                                    timeout_seconds
-        );
+                                                                    timeoutSeconds);
 
         if (response.Error)
             return console.error("Error invoking ValidateLeadInternational:", response.Error);

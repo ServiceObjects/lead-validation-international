@@ -24,70 +24,68 @@ In addition to the full functionality of the original service.
 //
 //  Required fields:
 //               country
-//               test_type 
-//               license_key
-//               is_live
+//               testType 
+//               licenseKey
+//               isLive
 // 
 // Optional:
-//        full_name 
+//        fullName 
 //        salutation
-//        first_name
-//        last_name
-//        business_name
-//        business_domain
-//        business_EIN
-//        address_line1
-//        address_line2
-//        address_line3
-//        address_line4
-//        address_line5
+//        firstName
+//        lastName
+//        businessNname
+//        businessDomain
+//        businessEIN
+//        addressLine1
+//        addressLine2
+//        addressLine3
+//        addressLine4
+//        addressLine5
 //        locality
-//        admin_area
-//        postal_code,
+//        adminArea
+//        postalCode,
 //        phone1
 //        phone2
 //        email
-//        ip_address
+//        ipAddress
 //        gender
-//        date_of_birth
-//        utc_capture_time
-//        output_language
-//        timeout_seconds (default: 15)
+//        dateOfBirth
+//        utcCaptureTime
+//        outputLanguage
+//        timeoutSeconds (default: 15)
 
 import { ValidateLeadInternationalSoap } from "../lead-validation-international-nodejs/src/SOAP/validate_lead_international_soap.js";
 
 // 2. Call the method.
 
-const lvi = new ValidateLeadInternationalSoap(
-    full_name,
-    salutation,
-    first_name,
-    last_name,
-    business_name,
-    business_domain,
-    business_EIN,
-    address_line1,
-    address_line2,
-    address_line3,
-    address_line4,
-    address_line5,
-    locality,
-    admin_area,
-    postal_code,
-    country,
-    phone1,
-    phone2,
-    email,
-    ip_address,
-    gender,
-    date_of_birth,
-    utc_capture_time,
-    output_language,
-    test_type,
-    licenseKey,
-    isLive,
-    timeout_seconds
-);
+const lvi = new ValidateLeadInternationalSoap(fullName,
+                                            salutation,
+                                            firstName,
+                                            lastName,
+                                            businessName,
+                                            businessDomain,
+                                            businessEIN,
+                                            addressLine1,
+                                            addressLine2,
+                                            addressLine3,
+                                            addressLine4,
+                                            addressLine5,
+                                            locality,
+                                            adminArea,
+                                            postalCode,
+                                            country,
+                                            phone1,
+                                            phone2,
+                                            email,
+                                            ipAddress,
+                                            gender,
+                                            dateOfBirth,
+                                            utcCaptureTime,
+                                            outputLanguage,
+                                            testType,
+                                            licenseKey,
+                                            isLive,
+                                            timeoutSeconds);
 
 const response = await lvi.validateLeadInternational();
 

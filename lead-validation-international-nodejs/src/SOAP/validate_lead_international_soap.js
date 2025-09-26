@@ -1,4 +1,3 @@
-import { LVIResponse } from "../SOAP/lvi_response.js";
 import { soap } from "strong-soap";
 
 /**
@@ -50,7 +49,6 @@ class ValidateLeadInternationalSoap {
         Phone1, Phone2, Email, IPAddress, Gender, DateOfBirth, UTCCaptureTime, OutputLanguage, TestType, LicenseKey,
         isLive, timeoutSeconds
     ) {
-        if (!LicenseKey) throw new Error("LicenseKey cannot be empty or null.");
 
         this.args = {
             FullName, Salutation, FirstName, LastName, BusinessName, BusinessDomain, BusinessEIN,
@@ -121,8 +119,7 @@ class ValidateLeadInternationalSoap {
                         if (!rawData) {
                             return reject(new Error("SOAP response is empty or undefined."));
                         }
-                        const parsed = new LVIResponse(rawData);
-                        resolve(parsed);
+                        resolve(rawData);
                     } catch (parseErr) {
                         reject(new Error(`Failed to parse SOAP response: ${parseErr.message}`));
                     }

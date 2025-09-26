@@ -21,7 +21,7 @@ In addition to the full functionality of the original service.
 ```
 //
 // 1 Instantiate the service wrapper
-   var lvi = new ValidateLeadInternational(true);
+var lvi = new ValidateLeadInternational(IsLive);
 
 // 2 Provide your input data
 //
@@ -56,6 +56,33 @@ In addition to the full functionality of the original service.
 //        UTCCaptureTime
 //        OutputLanguage
 //        TimeoutSeconds (default: 15)
+
+string FullName = "Tim Cook";
+            string Salutation = "";
+            string FirstName = "Tim";
+            string LastName = "Cook";
+            string BusinessName = "Apple";
+            string BusinessDomain = "apple.com";
+            string BusinessEIN = "";
+            string Address1 = "1 Infinite Loop";
+            string Address2 = "";
+            string Address3 = "";
+            string Address4 = "";
+            string Address5 = "";
+            string Locality = "Cupertino";
+            string AdminArea = "CA";
+            string PostalCode = "95014-2083";
+            string Country = "USA";
+            string Phone1 = "1-408-996-1010";
+            string Phone2 = "";
+            string Email = "tim@apple.com";
+            string IPAddress = "";
+            string Gender = "M";
+            string DateOfBirth = "";
+            string UTCCaptureTime = "2025-08-01T12:00:00Z";
+            string OutputLanguage = "English";
+            string TestType = "business-noip";
+            string LicenseKey = "YOUR LICENSE KEY";
 
 // 3 Call the service
  var response = lvi.InvokeAsync(

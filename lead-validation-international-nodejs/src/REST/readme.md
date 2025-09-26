@@ -24,70 +24,99 @@ In addition to the full functionality of the original service.
 //
 //  Required fields:
 //               country
-//               test_type 
-//               license_key
-//               is_live
+//               testType 
+//               licenseKey
+//               isLive
 // 
 // Optional:
-//        full_name 
+//        fullName 
 //        salutation
-//        first_name
-//        last_name
-//        business_name
-//        business_domain
-//        business_EIN
-//        address_line1
-//        address_line2
-//        address_line3
-//        address_line4
-//        address_line5
+//        firstName
+//        lastName
+//        businessNname
+//        businessDomain
+//        businessEIN
+//        addressLine1
+//        addressLine2
+//        addressLine3
+//        addressLine4
+//        addressLine5
 //        locality
-//        admin_area
-//        postal_code,
+//        adminArea
+//        postalCode,
 //        phone1
 //        phone2
 //        email
-//        ip_address
+//        ipAddress
 //        gender
-//        date_of_birth
-//        utc_capture_time
-//        output_language
-//        timeout_seconds (default: 15)
+//        dateOfBirth
+//        utcCaptureTime
+//        outputLanguage
+//        timeoutSeconds (default: 15)
 
 import { ValidateLeadInternationalClient } from "../lead-validation-international-nodejs/src/REST/validate_lead_international_rest.js";
 
+const fullName = "Tim Cook";
+const salutation = "";
+const firstName = "Tim";
+const lastName = "Cook";
+const businessName = "Apple";
+const businessDomain = "apple.com";
+const businessEIN = "";
+const addressLine1 = "1 Infinite Loop";
+const addressLine2 = "";
+const addressLine3 = "";
+const addressLine4 = "";
+const addressLine5 = "";
+const locality = "Cupertino";
+const adminArea = "CA";
+const postalCode = "95014-2083";
+const country = "USA";
+const phone1 = "1-408-996-1010";
+const phone2 = "";
+const email = "tim@apple.com";
+const ipAddress = "";
+const gender = "M";
+const dateOfBirth = "";
+const utcCaptureTime = "2025-08-01T12:00:00Z";
+const outputLanguage = "English";
+const testType = "business-noip";
+const timeoutSeconds = 15;
+const testType = "business-noip";
+const timeoutSeconds = 15;
+const isLive = true;
+const licenseKey = "YOUR LICENSE KEY";
+
 // 2. Call the method.
 
-const response = await ValidateLeadInternationalClient.invoke(
-    full_name,
-    salutation,
-    first_name,
-    last_name,
-    business_name,
-    business_domain,
-    business_EIN,
-    address_line1,
-    address_line2,
-    address_line3,
-    address_line4,
-    address_line5,
-    locality,
-    admin_area,
-    postal_code,
-    country,
-    phone1,
-    phone2,
-    email,
-    ip_address,
-    gender,
-    date_of_birth,
-    utc_capture_time,
-    output_language,
-    test_type,
-    licenseKey,
-    isLive,
-    timeout_seconds
-);
+const response = await ValidateLeadInternationalClient.invoke(fullName,
+                                                            salutation,
+                                                            firstName,
+                                                            lastName,
+                                                            businessName,
+                                                            businessDomain,
+                                                            businessEIN,
+                                                            addressLine1,
+                                                            addressLine2,
+                                                            addressLine3,
+                                                            addressLine4,
+                                                            addressLine5,
+                                                            locality,
+                                                            adminArea,
+                                                            postalCode,
+                                                            country,
+                                                            phone1,
+                                                            phone2,
+                                                            email,
+                                                            ipAddress,
+                                                            gender,
+                                                            dateOfBirth,
+                                                            utcCaptureTime,
+                                                            outputLanguage,
+                                                            testType,
+                                                            licenseKey,
+                                                            isLive,
+                                                            timeoutSeconds);
 
 // 3. Inspect results.
 

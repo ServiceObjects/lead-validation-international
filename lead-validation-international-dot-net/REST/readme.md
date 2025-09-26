@@ -84,7 +84,7 @@ var input = new(
     TestType: "business-noip",
     LicenseKey: licenseKey,
     TimeoutSeconds: 15,
-    IsLive: isLive
+    IsLive: true
 );
 
 // 2. Call the sync Invoke() method.
