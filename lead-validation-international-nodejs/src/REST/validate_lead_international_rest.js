@@ -7,21 +7,21 @@ import { LVIResponse } from './lvi_response.js';
 * @type {string}
 * @description The base URL for the live ServiceObjects Lead Validation International API service.
 */
-const LiveBaseUrl = 'https://sws.serviceobjects.com/lvi/api.svc/';
+const liveBaseUrl = 'https://sws.serviceobjects.com/lvi/api.svc/';
 
 /**
 * @constant
 * @type {string}
 * @description The base URL for the backup ServiceObjects Lead Validation International API service.
 */
-const BackupBaseUrl = 'https://swsbackup.serviceobjects.com/lvi/api.svc/';
+const backupBaseUrl = 'https://swsbackup.serviceobjects.com/lvi/api.svc/';
 
 /**
 * @constant
 * @type {string}
 * @description The base URL for the trial ServiceObjects Lead Validation International API service.
 */
-const TrialBaseUrl = 'https://trial.serviceobjects.com/lvi/api.svc/';
+const trialBaseUrl = 'https://trial.serviceobjects.com/lvi/api.svc/';
 
 /**
 * <summary>
@@ -76,50 +76,50 @@ const ValidateLeadInternationalClient = {
     * first and falling back to the backup if the response is invalid (Error.Number == '4') in live mode.
     * </summary>
     /**
-    * @param {string} full_name - The contact’s full name. e.g. Jane Doe
+    * @param {string} fullName - The contact’s full name. e.g. Jane Doe
     * @param {string} salutation - Salutation of the contact. Dr, Esq, Mr, Mrs etc
-    * @param {string} first_name - First name of the contact. e.g. Jane
-    * @param {string} last_name - Last name of the contact. e.g. Doe
-    * @param {string} business_name - The contact's company. e.g. Service Objects
-    * @param {string} business_domain - Website domain associated with the business. e.g. serviceobjects.com
-    * @param {string} business_EIN - Represents the Company Tax Number. Used for Tax exempt checks for US leads.
-    * @param {string} address_line1 - The address 1 of the contact or business address.
-    * @param {string} address_line2 - The address 2 of the contact or business address.
-    * @param {string} address_line3 - The address 3 of the contact or business address.
-    * @param {string} address_line4 - The address 4 of the contact or business address.
-    * @param {string} address_line5 - The address 5 of the contact or business address.
+    * @param {string} firstName - First name of the contact. e.g. Jane
+    * @param {string} lastName - Last name of the contact. e.g. Doe
+    * @param {string} businessName - The contact's company. e.g. Service Objects
+    * @param {string} businessDomain - Website domain associated with the business. e.g. serviceobjects.com
+    * @param {string} businessEIN - Represents the Company Tax Number. Used for Tax exempt checks for US leads.
+    * @param {string} addressLine1 - The address 1 of the contact or business address.
+    * @param {string} addressLine2 - The address 2 of the contact or business address.
+    * @param {string} addressLine3 - The address 3 of the contact or business address.
+    * @param {string} addressLine4 - The address 4 of the contact or business address.
+    * @param {string} addressLine5 - The address 5 of the contact or business address.
     * @param {string} locality - The city of the contact’s postal address.
-    * @param {string} admin_area - The state of the contact’s postal address.
-    * @param {string} postal_code - The zip code of the contact’s postal address.
+    * @param {string} adminArea - The state of the contact’s postal address.
+    * @param {string} postalCode - The zip code of the contact’s postal address.
     * @param {string} country - The country of the contact’s postal address. e.g. United States, US or USA
     * @param {string} phone1 - The contact’s primary phone number.
     * @param {string} phone2 - The contact’s secondary phone number.
     * @param {string} email - The contact’s email address.
-    * @param {string} ip_address - The contact’s IP address in IPv4. (IPv6 coming in a future release)
+    * @param {string} ipAddress - The contact’s IP address in IPv4. (IPv6 coming in a future release)
     * @param {string} gender - Male, Female or Neutral
-    * @param {string} date_of_birth - The contact’s date of birth
-    * @param {string} utc_capture_time - The time the lead was submitted
-    * @param {string} output_language - Language field indicating what language some of the output information will be.
-    * @param {string} test_type - The name of the type of validation you want to perform on this contact.
-    * @param {string} license_key - Your license key to use the service.
-    * @param {boolean} is_live - Value to determine whether to use the live or trial servers
-    * @param {number} timeout_seconds - Timeout, in seconds, for the call to the service.
+    * @param {string} dateOfBirth - The contact’s date of birth
+    * @param {string} utcCaptureTime - The time the lead was submitted
+    * @param {string} outputLanguage - Language field indicating what language some of the output information will be.
+    * @param {string} testType - The name of the type of validation you want to perform on this contact.
+    * @param {string} licenseKey - Your license key to use the service.
+    * @param {boolean} isLive - Value to determine whether to use the live or trial servers
+    * @param {number} timeoutSeconds - Timeout, in seconds, for the call to the service.
     * 
     * @returns {Promise<LVIResponse>} - A promise that resolves to an LVIResponse object.
     */
     async invokeAsync(
-        FullName, Salutation, FirstName, LastName, BusinessName, BusinessDomain, BusinessEIN,
-        Address1, Address2, Address3, Address4, Address5, Locality, AdminArea, PostalCode, Country,
-        Phone1, Phone2, Email, IPAddress, Gender, DateOfBirth, UTCCaptureTime, OutputLanguage, TestType, LicenseKey,
+        fullName, salutation, firstName, lastName, businessName, businessDomain, businessEIN,
+        address1, address2, address3, address4, address5, aocality, adminArea, postalCode, country,
+        phone1, phone2, email, ipAddress, gender, dateOfBirth, utcCaptureTime, outputLanguage, testType, licenseKey,
         isLive, timeoutSeconds
     ) {
         const params = {
-            FullName, Salutation, FirstName, LastName, BusinessName, BusinessDomain, BusinessEIN,
-            Address1, Address2, Address3, Address4, Address5, Locality, AdminArea, PostalCode, Country,
-            Phone1, Phone2, Email, IPAddress, Gender, DateOfBirth, UTCCaptureTime, OutputLanguage, TestType, LicenseKey
+            fullName, salutation, firstName, lastName, businessName, businessDomain, businessEIN,
+            address1, address2, address3, address4, address5, aocality, adminArea, postalCode, country,
+            phone1, phone2, email, ipAddress, gender, dateOfBirth, utcCaptureTime, outputLanguage, testType, licenseKey
         };
 
-        const url = buildUrl(params, isLive ? LiveBaseUrl : TrialBaseUrl);
+        const url = buildUrl(params, isLive ? liveBaseUrl : trialBaseUrl);
         let response = await httpGet(url, timeoutSeconds || 15);
 
         if (isLive && !isValid(response)) {
@@ -139,15 +139,15 @@ const ValidateLeadInternationalClient = {
     * @returns {LVIResponse} - An LVIResponse object with lead validation details or an error.
     */
     invoke(
-        FullName, Salutation, FirstName, LastName, BusinessName, BusinessDomain, BusinessEIN,
-        Address1, Address2, Address3, Address4, Address5, Locality, AdminArea, PostalCode, Country,
-        Phone1, Phone2, Email, IPAddress, Gender, DateOfBirth, UTCCaptureTime, OutputLanguage, TestType, LicenseKey,
+        fullName, salutation, firstName, lastName, businessName, businessDomain, businessEIN,
+        address1, address2, address3, address4, address5, aocality, adminArea, postalCode, country,
+        phone1, phone2, email, ipAddress, gender, dateOfBirth, utcCaptureTime, outputLanguage, testType, licenseKey,
         isLive, timeoutSeconds
     ) {
         return (async () => await this.invokeAsync(
-            FullName, Salutation, FirstName, LastName, BusinessName, BusinessDomain, BusinessEIN,
-            Address1, Address2, Address3, Address4, Address5, Locality, AdminArea, PostalCode, Country,
-            Phone1, Phone2, Email, IPAddress, Gender, DateOfBirth, UTCCaptureTime, OutputLanguage, TestType, LicenseKey,
+            fullName, salutation, firstName, lastName, businessName, businessDomain, businessEIN,
+            address1, address2, address3, address4, address5, aocality, adminArea, postalCode, country,
+            phone1, phone2, email, ipAddress, gender, dateOfBirth, utcCaptureTime, outputLanguage, testType, licenseKey,
             isLive, timeoutSeconds
         ))();
     }
