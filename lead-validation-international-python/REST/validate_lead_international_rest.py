@@ -74,7 +74,7 @@ def validate_lead_international(
                         timeout_seconds: int = 15
                     ) -> LVIResponse:
     """
-    Call LVI ValidateLeadInternational API to retrieve phone number information.
+    Call LVI ValidateLeadInternational API to evaluate your leads and target the best ones first based on their scores.
 
     Parameters:
         full_name: The contact's full name. e.g. Jane Doe
